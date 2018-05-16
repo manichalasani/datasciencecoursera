@@ -1,4 +1,4 @@
-
+## The function generates a special vector that helps to create cache of inverse of a matrix
 makeCacheMatrix <- function(x = matrix()) {
 
         i<-NULL
@@ -17,11 +17,12 @@ makeCacheMatrix <- function(x = matrix()) {
           
 }
 
-
+## The function computes inverse of a matrix or retrieves the cached inverse
 
 
 cacheSolve <- function(x, ...) {
-        
+  ## Return a matrix that is the inverse of 'x'
+  
         i<-x$getinverse()
         if(!is.null(i)) {
           message("getting cached data")
