@@ -51,7 +51,7 @@ nNA<-sum(is.na(activity$steps))
 
 The number of NAs in the data set is `r nNA`.
 
-### To impute NAs
+### To impute NAs by sustituting with average steps taken in the interval
 ```{r impute}
 toclean<-merge(activity,intervalsteps, by= "interval")
 toclean<-toclean[order(toclean$date),]

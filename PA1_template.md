@@ -62,7 +62,7 @@ The interval with maximum number of steps is 835.
 
 The number of NAs in the data set is 2304.
 
-### To impute NAs
+### To impute NAs by sustituting with average steps taken in the interval
 
     toclean<-merge(activity,intervalsteps, by= "interval")
     toclean<-toclean[order(toclean$date),]

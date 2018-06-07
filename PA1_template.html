@@ -163,8 +163,8 @@ maxinterval&lt;- max$interval</code></pre>
 <p>The interval with maximum number of steps is 835.</p>
 <pre class="r"><code>nNA&lt;-sum(is.na(activity$steps))</code></pre>
 <p>The number of NAs in the data set is 2304.</p>
-<div id="to-impute-nas" class="section level3">
-<h3>To impute NAs</h3>
+<div id="to-impute-nas-by-sustituting-with-average-steps-taken-in-the-interval" class="section level3">
+<h3>To impute NAs by sustituting with average steps taken in the interval</h3>
 <pre class="r"><code>toclean&lt;-merge(activity,intervalsteps, by= &quot;interval&quot;)
 toclean&lt;-toclean[order(toclean$date),]
 names(toclean)&lt;-c(&quot;interval&quot;, &quot;steps&quot;, &quot;date&quot;,&quot;meanin&quot; )
